@@ -1,0 +1,197 @@
+/******************************* CODE GÉNÉRAL *******************************/
+
+:root {
+    --bleu: #53ACFF;
+    --orange : #FF9C64;
+    --fond : #333333;
+    --fondbis : #505050;
+  }
+
+* {
+    transition: .33s ease all;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+	letter-spacing: 2px;
+	position: relative;
+    display: grid;
+    grid-template-columns: auto 0px;
+}
+
+/******************************* CODE DE LA NAVBAR *******************************/
+
+.DAKTARI img{
+    margin-left: 7px;
+    width: 75px;
+    cursor: pointer;
+}
+    
+header{
+    padding-top: 5px;
+    z-index: 999;
+    position: fixed;
+    background-color: #53ACFF;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 1s;
+    }
+ 
+header .NAVI{
+    position: relative;
+    line-height: 40px;
+}
+
+header .NAVI .menu{
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    user-select: none;
+    align-items: center;
+    text-align: center;
+}
+
+.menu li>a{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px 15px;
+    align-items: center;
+    text-align: center;
+}
+
+header .item a {
+    color: #fff;
+}
+
+header .item:hover{
+    background-color: #FF9C64;
+    border-radius: 100px;
+    transition: 0.3s;
+}
+
+header .connect a{
+    color: #FF9C64;
+    text-shadow: 1px 2px 2px #333333a0;
+}
+
+header .connect:hover a{
+    color: #fff;
+}
+
+header .rdv{
+    margin-right: 7px;
+    background-color: #FF9C64;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 100px;
+}
+
+header .rdv:hover {
+    background-color: #fff;
+    border: 2px solid #FF9C64;
+    border-radius: 100px;
+}
+
+header .rdv a:hover{
+    color: #FF9C64;
+}
+
+.scroll{
+    position: fixed;
+    top:0px;
+    left: 0;
+    right: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #FF9C64;
+    transition: width 0.3s ease-in-out;
+}
+
+@media (max-width:1140px){
+
+    .DAKTARI img{
+        width: 200px!important;
+    }
+
+    header .NAVI .menu{
+        position: fixed;
+        top: 60px;
+        left:-100%;
+        visibility: hidden;
+        display: block;
+        background: #53ACFF;
+        list-style: none;
+        min-width: 300px;
+        height: 100%;
+        justify-content: center;
+        padding: 20px 20px;
+        overflow-y:auto;
+        transition: 0.5s;
+        transition-property: left, visibility; 
+    }
+
+    header .NAVI .menu.active{
+        left:0;
+        visibility: visible;
+    }
+
+    header .item:hover{
+        background-color: transparent;
+        }
+        
+    .menu .item{
+        position: relative;
+    }
+
+    .menu .item a:hover{
+        color: #FF9C64;
+        transition: 0.3s;
+    }
+
+    .menu .item a:active{
+        color: #fff;
+        background-color: #FF9C64;
+    }
+    
+}
+
+
+/******************************* CODE DE LA NAVBAR *******************************/
+
+.accueil {
+    background: url(./img/veto.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover; 
+    margin: 0;
+    text-align: bottom;
+    padding: 25%;
+}
+
+.accueil p {
+    color: #FFFFFF;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bolder;
+    background: rgba(83, 172, 255, 0.5);
+    position: relative;
+    padding: 20px;
+}
