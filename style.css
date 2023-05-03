@@ -5,30 +5,18 @@
     --orange : #FF9C64;
     --fond : #333333;
     --fondbis : #505050;
-  }
-
+}
 * {
-    transition: .33s ease all;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-
-html {
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
-    margin: 0;
-    padding: 0;
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
 	letter-spacing: 2px;
 	position: relative;
-    display: grid;
-    grid-template-columns: auto 0px;
+    background-color: #EDEDED;
 }
 
 /******************************* CODE DE LA NAVBAR *******************************/
@@ -37,8 +25,7 @@ body {
     margin-left: 7px;
     width: 75px;
     cursor: pointer;
-}
-    
+}   
 header{
     padding-top: 5px;
     z-index: 999;
@@ -47,14 +34,13 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transition: 1s;
-    }
- 
+    transition: .5s;
+    border-bottom: 2px solid #fff;
+}
 header .NAVI{
     position: relative;
     line-height: 40px;
 }
-
 header .NAVI .menu{
     position: relative;
     display: flex;
@@ -64,7 +50,6 @@ header .NAVI .menu{
     align-items: center;
     text-align: center;
 }
-
 .menu li>a{
     display: block;
     font-size: 15px;
@@ -75,26 +60,21 @@ header .NAVI .menu{
     align-items: center;
     text-align: center;
 }
-
 header .item a {
     color: #fff;
 }
-
 header .item:hover{
     background-color: #FF9C64;
     border-radius: 100px;
-    transition: 0.3s;
+    transition: .3s;
 }
-
 header .connect a{
     color: #FF9C64;
     text-shadow: 1px 2px 2px #333333a0;
 }
-
 header .connect:hover a{
     color: #fff;
 }
-
 header .rdv{
     margin-right: 7px;
     background-color: #FF9C64;
@@ -102,17 +82,14 @@ header .rdv{
     border: 2px solid #fff;
     border-radius: 100px;
 }
-
 header .rdv:hover {
     background-color: #fff;
     border: 2px solid #FF9C64;
     border-radius: 100px;
 }
-
 header .rdv a:hover{
     color: #FF9C64;
 }
-
 .scroll{
     position: fixed;
     top:0px;
@@ -121,7 +98,7 @@ header .rdv a:hover{
     width: 0%;
     height: 5px;
     background-color: #FF9C64;
-    transition: width 0.3s ease-in-out;
+    transition: width .3s ease-in-out;
 }
 
 @media (max-width:1140px){
@@ -143,7 +120,7 @@ header .rdv a:hover{
         justify-content: center;
         padding: 20px 20px;
         overflow-y:auto;
-        transition: 0.5s;
+        transition: .5s;
         transition-property: left, visibility; 
     }
 
@@ -162,7 +139,7 @@ header .rdv a:hover{
 
     .menu .item a:hover{
         color: #FF9C64;
-        transition: 0.3s;
+        transition: .3s;
     }
 
     .menu .item a:active{
@@ -173,7 +150,7 @@ header .rdv a:hover{
 }
 
 
-/******************************* CODE DE LA NAVBAR *******************************/
+/******************************* CODE DE L'ACCUEIL *******************************/
 
 .accueil {
     background: url(./img/veto.jpg);
@@ -184,9 +161,8 @@ header .rdv a:hover{
     text-align: bottom;
     padding: 25%;
 }
-
 .accueil p {
-    color: #FFFFFF;
+    color: #fff;
     align-items: center;
     text-align: center;
     font-size: 35px;
@@ -194,4 +170,163 @@ header .rdv a:hover{
     background: rgba(83, 172, 255, 0.5);
     position: relative;
     padding: 20px;
+    line-height: 75px;
 }
+.infos{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 300px;
+    align-items: center;
+}
+.bloc {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: inline-block;
+    width: 15%;
+    color: #53ACFF;
+    font-weight: bolder;
+    text-align: center;
+}
+.infos img{
+    margin-bottom: 20px;
+}
+.plus {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+    height: 300px;
+    margin-top: 150px;
+}
+.plus a {
+    color: #FF9C64;
+    text-decoration: none;
+}
+
+
+
+/******************************* CODE DU FOOTER *******************************/
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+}
+.formulaire_co {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #EDEDED;
+    padding: 25px 200px 100px 200px;
+}
+.formulaire_co h1 {
+    color: #333333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    color: #53ACFF;
+    font-weight: bold;
+    font-size: 15px;
+}
+form input{
+    color: #53ACFF;
+    margin: 5px 0;
+    padding: 5px 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+form input[type='submit']{
+    background-color: #53ACFF;
+    align-items: center;
+    border: 1px solid #53ACFF;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 25px;
+    padding: 6px 0;
+    cursor: pointer;
+}
+form button {
+    background-color: #333333;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    align-items: center;
+    color: #EDEDED;
+    margin-top: 15px;
+    padding: 6px 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/******************************* CODE DU FOOTER *******************************/
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 100px;
+    align-items: center;
+    background-color: #fff;
+    text-align: center;
+    border-top: 25px solid #53ACFF;
+}
+.footer p {
+    position: relative;
+    color: #333333;
+    text-align: center;
+    align-items: center;
+}
+.footer .rec {
+    width: 200px;
+    height: 75px;
+    background-color: #FF9C64;
+}
+.copyright {
+    text-align: center;
+    font-weight: bold;
+    font-size: small;
+    color: #fff;
+    background-color: #53ACFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
