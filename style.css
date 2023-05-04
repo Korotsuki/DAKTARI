@@ -230,11 +230,15 @@ body {
     padding: 100px;
 }
 .veto h2 {
-    font-size: 27px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF9C64;
     margin-left: 15px;
 }
 .veto h3 {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: #53ACFF;
     margin-left: 15px;
 }
 .veto img {
