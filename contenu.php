@@ -71,6 +71,9 @@ if(isset($_POST['bouton-valider'])){
     if(isset($variables['num'])) $num = $variables['num'];
 }
 
-header('Location: index.php');
-exit;
+if (basename($_SERVER['PHP_SELF']) == 'contenu.php') {
+    header('Location: index.php');
+    exit();
+}
+
 ?>
