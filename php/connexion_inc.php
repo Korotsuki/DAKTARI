@@ -5,11 +5,13 @@
  */
 $user = 'maryam.consani'; // A COMPLETER
 $pass = 'ryrybdd';// A COMPLETER
+
 try {
     $cnx = new PDO('pgsql:host=sqletud.u-pem.fr;dbname=maryam.consani_db',
     $user,
     $pass);
-    $cnx->exec("SET SEARCH_PATH TO bliblou;");*/
+    $requete = 'SET search_path TO bliblou';
+    $result = $cnx -> exec($requete);
     
 }
 catch (PDOException $e) {
