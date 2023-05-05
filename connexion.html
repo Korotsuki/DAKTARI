@@ -1,6 +1,3 @@
-<?php 
-include('connexion_inc.php');
-?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -38,19 +35,18 @@ include('connexion_inc.php');
             <section class="formulaire_co">
                 <h1>Connexion</h1>
                 <br/>
-                <form action="connexion_utilisateur.php" method="POST">
-                    <label>Adresse Mail</label>
-                    <input type="text" name="email">
+                <form action="./php/connexion_utilisateur.php" method="POST">
+                    <label>Identifiant</label>
+                    <input type="text" name="id">
                     <br/>
                     <label>Mot De Passe</label>
-                    <input type="password" name="mdp">
+                    <input type="text" name="mdp">
                     <br/>
                     <input type="submit" value="Connexion" name="bouton-valider">
                 </form>
                 <button><a href="./creationcompte.html">Créer un compte</a></button>
             </section>
         </div>
-
 
          <!-- Code du bas de page -->
          <footer class="footer">
@@ -69,5 +65,16 @@ include('connexion_inc.php');
         </footer>
         <p class="copyright">© 2023・Tous droits réservés</p>
 
+    <script>
+        // Récupération de la valeur du paramètre "error" dans l'URL
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get("error");
+        
+        // Si le paramètre "error" est présent et a la valeur "1", afficher une alerte "identifiants invalides"
+        if (error === "1") {
+            alert("Identifiants invalides");
+        }
+    </script>
     </body>
+
 </html>
