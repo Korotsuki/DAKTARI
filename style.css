@@ -169,7 +169,7 @@ body {
 /******************************* CODE DE L'ACCUEIL *******************************/
 
 .accueil {
-    background: url(./img/clinique.jpg);
+    background: url(./img/clinique2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: cover; 
@@ -278,7 +278,7 @@ hr {
 /******************************* CODE DE PAGE CONNEXION *******************************/
 
 .form{
-    display: flex;
+    display: grid;
     align-items: center;
     justify-content: center;
     height: 100vh;
