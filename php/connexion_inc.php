@@ -9,7 +9,7 @@ try {
     $cnx = new PDO('pgsql:host=sqletud.u-pem.fr;dbname=maryam.consani_db',
     $user,
     $pass);
-    /*$cnx->exec("set SEARCH_PATH TO projet");*/
+    $cnx->exec("SET SEARCH_PATH TO bliblou;");*/
     
 }
 catch (PDOException $e) {
@@ -23,8 +23,5 @@ catch (PDOException $e) {
 //    echo "Error: " . $e;
 
 }
-
-    $req = 'SET search_path TO projet;';
-    $res = $cnx -> exec($req);
 
 ?>
