@@ -70,4 +70,7 @@ if(isset($_POST['bouton-valider'])){
     if(isset($variables['phae2'])) $phae2 = $variables['phae2'];
     if(isset($variables['num'])) $num = $variables['num'];
 }
+
+header('Location: index.php');
+exit;
 ?>
