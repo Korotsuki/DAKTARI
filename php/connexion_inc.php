@@ -3,8 +3,8 @@
 /*
  * création d'objet PDO de la connexion qui sera représenté par la variable $cnx
  */
-$user = 'coucou :3'; // A COMPLETER
-$pass = 'E: uocuoc';// A COMPLETER
+$user = 'maryam.consani'; // A COMPLETER
+$pass = 'ryrybdd';// A COMPLETER
 try {
     $cnx = new PDO('pgsql:host=sqletud.u-pem.fr;dbname=maryam.consani_db',
     $user,
