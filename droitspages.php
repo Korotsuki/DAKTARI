@@ -40,6 +40,11 @@
         <div class="containerprive">
             <h1>Droits utilisateurs</h1>
 
+            <?php
+            echo "Vous êtes connectés en tant que ";
+            echo $_SESSION['id'];
+            ?>
+
             <h2>VETO</h2>
             <?php
             $sql = "SELECT acces, nompage FROM d_droits WHERE acces='VETO' ORDER BY acces ASC";
@@ -109,7 +114,7 @@
                 exit();
 
             } elseif (isset($_POST["Supprimer"])) {
-                $acces = $_POST["acces"];
+                $acces = $_POST["acces"];  
                 $nompage = $_POST["nompage"];
 
                 $stmt = $cnx->prepare("DELETE FROM d_droits WHERE acces = ? AND nompage = ?");

@@ -39,6 +39,10 @@
         <!-- Contenu de la page -->
         <div class="containerprive">
         <h1>Dossiers Clients</h1>
+        <?php
+            echo "Vous êtes connectés en tant que ";
+            echo $_SESSION['id'];
+        ?>
         <br>
         <h2>Recherche Clients</h2>
         <form method="POST" action="">
