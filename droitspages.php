@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css" />
-        <title>Création compte</title>
+        <title>Droits Users</title>
         <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
         <META NAME="Author" CONTENT="Hélèna/Maryam">
         <META NAME="Keywords" CONTENT="DAKTARI">
@@ -107,7 +107,7 @@
                 echo "Les droits ont été ajoutés avec succès.";
                 header("Location: ".$_SERVER["PHP_SELF"]);
                 exit();
-                
+
             } elseif (isset($_POST["Supprimer"])) {
                 $acces = $_POST["acces"];
                 $nompage = $_POST["nompage"];

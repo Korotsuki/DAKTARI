@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css" />
-        <title>Accueil</title>
+        <title>Modification Contenu</title>
         <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.ico">
         <META NAME="Author" CONTENT="Hélèna/Maryam">
         <META NAME="Keywords" CONTENT="DAKTARI">
@@ -84,24 +84,6 @@
             </form>
             </div>
         </div>
-
-
-         <!-- Code du bas de page -->
-         <footer class="footer">
-            <div class="bloc">
-                <p>14 rue des fleurets</p>
-                <p>45120 Châlette-sur-Loing</p>
-            </div>
-            <div class="bloc">
-                <div class="rec"></div>
-            </div>
-            <div class="bloc">
-                <p>CPGU</p>
-                <p>Mentions légales</p> 
-                <p>Règles RGPD</p>
-            </div>
-        </footer>
-        <p class="copyright">© 2023・Tous droits réservés</p>
 
     </body>
 </html>
