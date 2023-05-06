@@ -30,6 +30,9 @@ body {
     padding: 30px;
     font-size: 50px;
 }
+
+
+
 /******************************* CODE DE LA NAVBAR *******************************/
 
 .DAKTARI img{
@@ -475,12 +478,25 @@ tr:nth-of-type(2n) {
 }
 
 
+/******************************* CODE DE PAGE DROITS *******************************/
 
+.containerprive {
+    margin-left: 10px;
+    margin-bottom: 5%;
+}
 
+.choicesdroits input{
+    width: 15%;
+    display: inline-block;
+}
 
+.droitsform select{
+    width: 45%;
+}
 
-
-
+.containerprive th, td {
+    padding: 2px;
+}
 
 
 
