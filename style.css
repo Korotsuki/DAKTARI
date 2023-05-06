@@ -485,17 +485,58 @@ tr:nth-of-type(2n) {
     margin-bottom: 5%;
 }
 
-.choicesdroits input{
-    width: 15%;
-    display: inline-block;
-}
-
-.droitsform select{
-    width: 45%;
+.containerprive table {
+    width: none;
+    border-collapse: collapse;
+    background-color: aliceblue;
 }
 
 .containerprive th, td {
     padding: 2px;
+}
+
+.containerprive table tr:first-child {
+    background: rgb(130, 197, 255);
+}
+
+.containerprive table tbody td{
+    width: 13%;
+}
+.containerprive table tr:nth-of-type(2n) {
+    background: hsl(0 0% 0% / 0.1);
+}
+
+.choicesdroits input{
+    width: 10%;
+    display: inline-block;
+}
+
+.droitsform{
+    background: #afafafc5;
+    margin-top: 1%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    align-items: center;
+}
+
+.droitsform form{
+    display: block;
+}
+
+.droitsform form input[type="reset"]{
+    background-color: #ec7b39;
+    color: #EDEDED;
+    padding: 6px 0;
+}
+
+.droitsform form input[type="submit"]{
+    margin-top: 0;
+}
+
+.droitsform select{
+    width: 25%;
 }
 
 

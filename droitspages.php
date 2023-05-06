@@ -71,8 +71,22 @@
             echo "</table>";
             ?>
 
-            <h2>Modification des droits</h2>
+            <br>
+            <h2>ADMIN</h2>
+            <?php
+            $sql = "SELECT acces, nompage FROM d_droits WHERE acces='ADMIN' ORDER BY acces ASC";
+            $resultat = $cnx->query($sql);
+
+            echo "<table>";
+            echo "<tr><th>Accès</th><th>Nom de la page</th></tr>";
+            while ($ligne = $resultat->fetch(PDO::FETCH_ASSOC)) {
+                echo "<tr><td>" . $ligne["acces"] . "</td><td>" . $ligne["nompage"] . "</td></tr>";
+            }
+            echo "</table>";
+            ?>
+
             <div class="droitsform">
+            <h2>Modification des droits</h2>
             <form method="post">
             <label for="acces">Accès :</label>
             <select name="acces">
