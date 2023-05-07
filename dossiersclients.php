@@ -81,7 +81,7 @@
         echo "<h2>Liste Clients</h2>";
         if (!empty($clients)) {
             echo '<table>';
-            echo '<tr><th>Code</th><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Téléphone</th><th>Compte Client</th></tr>';
+            echo '<tr><th>Code</th><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Téléphone</th></tr>';
             foreach ($clients as $client) {
                 echo '<tr>';
                 echo '<td>' . $client['codecli'] . '</td>';
