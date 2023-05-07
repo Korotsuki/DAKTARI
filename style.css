@@ -326,17 +326,32 @@ form input{
     border-radius: 5px;
     font-weight: bold;
 }
-form input[type='submit']{
+form select{
+    color: #53ACFF;
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 5px 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+}
+form select option{
+    text-align: center;
+}
+.button{
     background-color: #53ACFF;
     align-items: center;
-    border: 1px solid #53ACFF;
+    border: 2px solid #53ACFF;
     border-radius: 5px;
     color: #fff;
-    margin-top: 25px;
-    padding: 6px 0;
+    padding: 4px 0;
     cursor: pointer;
 }
-.formulaire_co button {
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
+.formulaire_co .btn {
     background-color: #333333;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -347,10 +362,11 @@ form input[type='submit']{
     cursor: pointer;
     font-weight: bold;
 }
-.formulaire_co button a {
+.formulaire_co .btn a {
     text-decoration: none;
     color: #fff;
 }
+
 
 /******************************* CODE DU INFOS *******************************/
 .infoscontainer {
@@ -436,7 +452,6 @@ tr:nth-of-type(2n) {
 
 
 
-
 /******************************* CODE DU FOOTER *******************************/
 
 .footer {
@@ -467,6 +482,7 @@ tr:nth-of-type(2n) {
     color: #fff;
     background-color: #53ACFF;
 }
+
 
 /******************************* CODE DE PAGE MODIF *******************************/
 
@@ -538,13 +554,6 @@ tr:nth-of-type(2n) {
 .droitsform select{
     width: 25%;
 }
-
-
-
-
-
-
-
 
 
 
