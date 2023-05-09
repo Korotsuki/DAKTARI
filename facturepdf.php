@@ -35,16 +35,26 @@ $html = '
 <body>
     <h1>Facture de Consultation</h1>
     <p>Nom du client : '.$nomcli.'</p>
-    <p>Animal : '.$animal.'</p>
-    <p>Diagnostic du médecin concernant '.$animal.': '.$diagnostic.'</p>
-    <p>Remise  : '.$remise.'%</p>
-    <p>Manipulation : '.$manipulation.'€</p>
-    <p>Total du montant Hors Taxes: '.$total.'€</p>
+    <p>Animal : '.$animal.'</p>';
+
+// Vérification et affichage de la colonne uniquement si la variable n'est pas vide
+if (!empty($diagnostic)) {
+    $html .= '<p>Diagnostic du médecin concernant '.$animal.': '.$diagnostic.'</p>';
+}
+
+$html .= '<p>Remise  : '.$remise.'%</p>';
+
+// Vérification et affichage de la colonne uniquement si la variable n'est pas vide
+if (!empty($manipulation)) {
+    $html .= '<p>Manipulation : '.$manipulation.'€</p>';
+}
+
+$html .= '<p>Total du montant Hors Taxes: '.$total.'€</p>
     <br><br><br><br>
     <h3>Cabinet Médical du Dr. DAKTARI</h3>
 </body>
-</html>
-';
+</html>';
+
 
 // Ajout du contenu dans le PDF
 $pdf->writeHTML($html, true, false, true, false, '');

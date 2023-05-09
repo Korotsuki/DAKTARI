@@ -15,50 +15,31 @@
         <nav class="NAVBAR">
             <div class="scroll"></div>
             <div class="DAKTARI">
-                <a href="./index.php"><img src="./img/daktari.png" alt="DAKTARI"></a>
+                <a href="./index.html"><img src="./img/daktari.png" alt="DAKTARI"></a>
             </div>
             <div class="NAVI">
                 <ul class="menu">
-                    <?php
-                    include("./php/connexion_inc.php");
-                    include("./php/connexion_utilisateur.php");
-                    $resultat = $cnx->prepare("SELECT nompage FROM d_droits WHERE acces=:acces ORDER BY nompage DESC");
-                    $resultat->execute(array(':acces' => $_SESSION['acces']));
-                    if ($resultat->rowCount() > 0) {
-                        while ($ligne = $resultat->fetch(PDO::FETCH_OBJ)) {
-                            echo '<li class="item"><a href="./'.$ligne->nompage.'.php">'.$ligne->nompage.'</a></li>';
-                        }
-                    }
-                    ?>
+                    <!--<li class="item"><a href="./index.html">Accueil</a></li>-->
+                    <li class="item"><a href="./team.html">L'équipe Vet</a></li>
+                    <li class="item"><a href="./infospratiques.php">Informations pratiques</a></li>
+                    <li class="item connect"><a href="./connexion.html">Se connecter</a></li>
+                    <li class="item rdv"><a href="./rdv.html">Prendre RDV | 06 54 91 23 45</a></li>
                 </ul>
             </div>
         </nav>
-
-
 
         <!-- Contenu de la page -->
         <body>
             <div class="form">
                 <section class="formulaire_co">
                     <h1>Prise de rendez-vous</h1>
-                    <form method="post" action="priserdv.php">
+                    <form action="rdv.php" method="post" >
                         <label>Nom :</label>
                         <input type="text" name="nom" required>
                         <br/>
                         <label>Prénom :</label>
                         <input type="text" name="prenom" required>
                         <br/>
-			<label for="numconsultation">Numéro Consultation:</label>
-			<?php
-			$resultat=$cnx->query("SELECT d_animal.nomanimal FROM d_animal INNER JOIN d_client ON d_client.codecli = d_animal.codecli INNER JOIN d_login ON d_client.codecli = d_login.codecli WHERE d_login.id = :id;");
-				echo '<select name="nomanimal">';
-			while( $ligne = $resultat->fetch(PDO::FETCH_OBJ) ) {
-				echo '<option value="'.$ligne->nomanimal.'">';
-				echo $ligne->nomanimal;
-				echo '</option>';
-			}
-				echo '</select>';
-			?>
                         <label>Date :</label>
                         <!--<input type="date" name="date" required>-->
                         <input type="date" name="date" required>
@@ -88,6 +69,21 @@
 							<option value="17:30">17:30</option>
                             <option value="18:00">18:00</option>
                         </select>
+                        <br/>
+                        <label>Animal :</label>
+                        <?php   
+                        include('./php/connexion_inc.php');
+                        include('./php/connexion_utilisateur.php');
+                            $resultat=$cnx->prepare("SELECT numanimal,nomanimal FROM d_animal WHERE d_animal.codecli = ?");
+                            $resultat->execute([$_SESSION['codecli']]);
+                            echo '<select name="numanimal">';
+                        while( $ligne = $resultat->fetch(PDO::FETCH_OBJ) ) {
+                            echo '<option value="'.$ligne->numanimal.'">';
+                            echo $ligne->nomanimal;
+                            echo '</option>';
+                        }
+                            echo '</select>';
+                        ?>
                         <br/>
                         <label>Lieu du rdv :</label>
                         <select name="lieu">

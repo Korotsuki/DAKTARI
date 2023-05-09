@@ -81,7 +81,7 @@
         echo "<h2>Liste Clients</h2>";
         if (!empty($clients)) {
             echo '<table>';
-            echo '<tr><th>Code</th><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Téléphone</th></tr>';
+            echo '<tr><th>Code</th><th>Nom</th><th>Prénom</th><th>Adresse</th><th>Téléphone</th><th>Compte Client</th></tr>';
             foreach ($clients as $client) {
                 echo '<tr>';
                 echo '<td>' . $client['codecli'] . '</td>';
@@ -89,7 +89,7 @@
                 echo '<td>' . $client['prenomcli'] . '</td>';
                 echo '<td>' . $client['adrcli'] . '</td>';
                 echo '<td>' . $client['telcli'] . '</td>';
-                echo '<td><a href="moncompte.php?codecli=' . $client['codecli'] . '&nomcli=' . $client['nomcli'] . '&prenomcli=' . $client['prenomcli'] . '&adrcli=' . $client['adrcli'] . '&telcli=' . $client['telcli'] . '">Voir le compte client</a></td>';
+                echo '<td><a href="moncompte.php?codecli=' . $client['codecli'] .'">Voir le compte client</a></td>';
                 echo '</tr>';                
             }
             echo '</table>';
