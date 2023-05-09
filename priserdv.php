@@ -48,6 +48,17 @@
                         <label>Prénom :</label>
                         <input type="text" name="prenom" required>
                         <br/>
+			<label for="numconsultation">Numéro Consultation:</label>
+			<?php
+			$resultat=$cnx->query("SELECT d_animal.nomanimal FROM d_animal INNER JOIN d_client ON d_client.codecli = d_animal.codecli INNER JOIN d_login ON d_client.codecli = d_login.codecli WHERE d_login.id = :id;");
+				echo '<select name="nomanimal">';
+			while( $ligne = $resultat->fetch(PDO::FETCH_OBJ) ) {
+				echo '<option value="'.$ligne->nomanimal.'">';
+				echo $ligne->nomanimal;
+				echo '</option>';
+			}
+				echo '</select>';
+			?>
                         <label>Date :</label>
                         <!--<input type="date" name="date" required>-->
                         <input type="date" name="date" required>
