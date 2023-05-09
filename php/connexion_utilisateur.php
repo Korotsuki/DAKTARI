@@ -77,5 +77,6 @@ if (isset($_POST['id']) && isset($_POST['mdp'])){
 
     }else{// sinon (erreur)... -> Il n'y a pas de compte correspondand=
         header('Location: ../connexion.html?error=1'); 
+        exit;
     }
 }
