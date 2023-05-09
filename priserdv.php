@@ -15,18 +15,25 @@
         <nav class="NAVBAR">
             <div class="scroll"></div>
             <div class="DAKTARI">
-                <a href="./index.html"><img src="./img/daktari.png" alt="DAKTARI"></a>
+                <a href="./index.php"><img src="./img/daktari.png" alt="DAKTARI"></a>
             </div>
             <div class="NAVI">
                 <ul class="menu">
-                    <!--<li class="item"><a href="./index.html">Accueil</a></li>-->
-                    <li class="item"><a href="./team.html">L'équipe Vet</a></li>
-                    <li class="item"><a href="./infospratiques.html">Informations pratiques</a></li>
-                    <li class="item connect"><a href="./connexion.html">Se connecter</a></li>
-                    <li class="item rdv"><a href="./rdv.html">Prendre RDV | 06 54 91 23 45</a></li>
+                    <?php
+                    include("./php/connexion_inc.php");
+                    include("./php/connexion_utilisateur.php");
+                    $resultat = $cnx->prepare("SELECT nompage FROM d_droits WHERE acces=:acces ORDER BY nompage DESC");
+                    $resultat->execute(array(':acces' => $_SESSION['acces']));
+                    if ($resultat->rowCount() > 0) {
+                        while ($ligne = $resultat->fetch(PDO::FETCH_OBJ)) {
+                            echo '<li class="item"><a href="./'.$ligne->nompage.'.php">'.$ligne->nompage.'</a></li>';
+                        }
+                    }
+                    ?>
                 </ul>
             </div>
         </nav>
+
 
 
         <!-- Contenu de la page -->
